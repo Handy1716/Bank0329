@@ -1,0 +1,10 @@
+POST /transfer/1/2 HTTP/1.1
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: localhost:3000
+Content-Length: 20
+
+{
+  "amount": 1000
+}
