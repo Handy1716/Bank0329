@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateOwnerDto } from './dto/create-owner.dto';
 import { UpdateOwnerDto } from './dto/update-owner.dto';
+import { Owner } from './entities/owner.entity';
 
 @Injectable()
 export class OwnerService {
@@ -12,8 +13,8 @@ export class OwnerService {
     return `This action returns all owner`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} owner`;
+  async findOne(id: number) : Promise<Owner> {
+    return ; // TODO
   }
 
   update(id: number, updateOwnerDto: UpdateOwnerDto) {
