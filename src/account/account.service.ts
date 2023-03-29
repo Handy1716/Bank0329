@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
+import { Account } from './entities/account.entity';
 
 @Injectable()
 export class AccountService {
@@ -12,8 +13,8 @@ export class AccountService {
     return `This action returns all account`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} account`;
+  async findOne(id: number) : Promise<Account> {
+    return ; // TODO
   }
 
   update(id: number, updateAccountDto: UpdateAccountDto) {
